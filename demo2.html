@@ -15,19 +15,20 @@ body {
   margin: 0;
   font-size: 28px;
   font-family: Arial, Helvetica, sans-serif;
+ 
 }
 
 .header {
   background-color: #f1f1f1;
-  padding: 0px;
   text-align: center;
   z-index: 9999;
 }
 
 #navbar {
   overflow: hidden;
+  padding-top: 10px;
   background-color: rgba(105, 105, 105, 0.7);
-  z-index: 9999;
+  z-index: 5000;
 }
 
 #navbar a {
@@ -76,11 +77,18 @@ body {
 		transform: scale(1, .025);
 	}
 }
+.square-wrapper {
+background-image: url("https://uc5adcc91815f34676dba719ad64.previews.dropboxusercontent.com/p/thumb/ABQe17T2yB4eFVeegncJvFjuUWIHjQyIr6hfTXO8xKlcku8s93qOVFXup_FzIYoZ85jDdXGIq3zLcBjfmuPV1qpm5RsVMXqmgE8Ouy6fn2OtGX8rHX3-CRmMX8A0vNAG9LNsGaM6SyP5nJ_lO_X0kME66O3Xndd5txDQUtJ36GKBIwEI57awTwpDNByOnK7T7IvG131ch6717p_UYYEKNdBgJzEoWmjjYSoES2D0aGNU0dQcfpl65xcBZYx8yv6HmJ6E4C8x_Lab_BQYoL_8wq-j-S4qqQL4JCtsPTwFGUqwZ6P9S0KBS0kCNemjZL19v6FGcsuHqRrALkbl0LaQBYBcWlo7mNu6L4bjo_YebOMiROuZ7v4kTHr7k5IXKH5vlNPpQo35_McuKyeqx47DXTaJ/p.jpeg?fv_content=true&size_mode=5");
+background-size: 50%;
+background-repeat: no-repeat;
+background-position: center center;
+}
+
 .square {
   width: 100%;
-  height: 700px;
-  background: dimgrey;
-  border-radius: 0px;
+  height: 900px;
+  background: #006600;
+  border-radius: 10px;
   opacity: 0;
   z-index: 2;
 }
@@ -162,29 +170,23 @@ img {vertical-align: middle; z-index: 1;}
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
 /* The dots/bullets/indicators */
 .dot { 
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
+  position: relative;
+  top: -45px;
+  margin: 0px 2px;
+  background-color: #006600;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: white 0.6s ease;
+  z-index: 99;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: white;
 }
 
 /* Fading animation */
@@ -196,12 +198,12 @@ img {vertical-align: middle; z-index: 1;}
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: 1} 
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: 1} 
   to {opacity: 1}
 }
 
@@ -250,7 +252,7 @@ img {vertical-align: middle; z-index: 1;}
 
 .fixed-bg1 {
   background-image: url("https://www.mayberryelectric.com/uploads/8/8/5/6/8856990/view-from-bridge-2_orig.jpg");
-  min-height: 650px;
+  min-height: 900px;
   width: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -260,7 +262,7 @@ img {vertical-align: middle; z-index: 1;}
 
 .fixed-bg2 {
   background-image: url("https://www.mayberryelectric.com/uploads/8/8/5/6/8856990/6073908_orig.jpg");
-  min-height: 650px;
+  min-height: 900px;
   width: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -270,7 +272,7 @@ img {vertical-align: middle; z-index: 1;}
 
 .fixed-bg3 {
   background-image: url("https://www.mayberryelectric.com/uploads/8/8/5/6/8856990/99768_orig.jpg");
-  min-height: 650px;
+  min-height: 900px;
   width: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -286,7 +288,7 @@ img {vertical-align: middle; z-index: 1;}
  display: flex;
  justify-content: center;
  align-items: center;
- min-height: 100vh;
+ min-height: 60vh;
  font-size: 16px;
 }
 
@@ -309,7 +311,7 @@ img {vertical-align: middle; z-index: 1;}
  transition: 0.5s;
  justify-content: flex-start;
  align-items: center;
- background: linear-gradient(60deg, #006624, #00cc47);
+ background: linear-gradient(45deg, #006600, #00b300);
 }
 
 .container .card img
@@ -319,7 +321,9 @@ img {vertical-align: middle; z-index: 1;}
  height: 400px;
  left: 50%;
  transform: translateX(-50%);
-transition: 0.5s
+ transition: 0.5s;
+
+
 }
 .container .card:hover img
 {
@@ -351,13 +355,14 @@ transition: 0.5s
  text-transform: uppercase;
 font-size: 2.2em;
 line-height: 1em;
+text-decoration: none;
 }
 
 .container .card .content p
 {
  color: #fff;
 }
-.container .card .content a
+.container .card .content .container_link
 {
  position: relative;
  color: #111;
@@ -420,7 +425,85 @@ line-height: 1em;
 	}
 }
 
+::-webkit-scrollbar
+{
+ width: 0;
+}
+#scrollPath
+{
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 10px;
+ background: rgba(255,255,255,0.05);
+}
 
+#progressbar
+{
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 0;
+ height: 10px;
+background: linear-gradient(to left, #006622, #99ff99);
+z-index: 5001;
+
+}
+
+#progressbar:before
+{
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: linear-gradient(to left, #006622, #99ff99);
+ filter: blur(5px);
+    
+}
+#progressbar:after
+{
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: linear-gradient(to left, #006622, #99ff99);
+ filter: blur(10px);
+    
+}
+
+
+.company_about
+{
+ position: relative;
+ width: 100%;
+ margin 20px 0;
+}
+
+.company_about h2
+{
+ color: #006600;
+ 
+}
+
+.company_about_holder
+{
+ background-image: url("https://www.cei.com/assets/blue-bkgd.png");
+ background-size: cover;
+ background-position: center center;
+  
+}
+
+.company_about_wrapper
+{
+ width: 100%;
+ margin-left: 30px;
+ margin-right: 30px;
+}
 
 </style>
 </head>
@@ -429,6 +512,8 @@ line-height: 1em;
 
 
 <div id="navbar">
+<div id="progressbar"></div>
+<div id="scrollPath"></div>
   <a class="active" href="javascript:void(0)">Home</a>
   <a href="javascript:void(0)">News</a>
   <a href="javascript:void(0)">Contact</a>
@@ -483,22 +568,34 @@ line-height: 1em;
 <div class="container">
     		<div class="card">
         		<div class="content">
-            			<h2>Baxter Govan</h2>
-            			<p>Programmer Extrordinare</p>
-            			<a href="#">Read More</a>
+            			<h2>Services</h2>
+            			<p>Safety and Satisfaction are Our #1 Priorities </p>
+            			<a class="container_link" href="#">Read More</a>
             		</div>
-            		<img src="https://www.seekpng.com/png/detail/635-6352505_business-casual-dress-code-for-women-png.png">              
+            		<img href="#" src="https://banner2.cleanpng.com/20180411/tuw/kisspng-electrician-architectural-engineering-stock-photog-spanner-5acdd1f4727b16.4449607615234380684689.jpg">              
         	</div>
         	<div class="card">
         		<div class="content">
-            			<h2>Baxter Govan2</h2>
-            			<p>Programmer2 Extrordinare2</p>
-            			<a href="#">Read So Much More</a>
+            			<h2 class="header_link">Projects</h2>
+            			<p>Let Us Show You What We Can Do</p>
+            			<a class="container_link" href="#">Read More</a>
             		</div>
-            		<img src="https://img.favpng.com/12/9/3/businessperson-stock-photography-royalty-free-png-favpng-Dn8fzTJKyiXxwRsZm9dxaBh7J.jpg">              
+            		<img src="https://images.cdn4.stockunlimited.net/preview1300/man-with-hardhat-looking-at-blueprint_1864638.jpg">             
         	</div>
     	</div>
 </div>
+
+<div style="height:800px;background-color:gray;">This div is only here to enable scrolling (height = 800 pixels).</div>
+<br>
+<div class="company_about">
+	<h2>Who We Are...</h2>
+    <div class="company_about_holder">
+    	<div class="company_about_wrapper">
+        <p> Atlanta's Premier Commercial Electrical Contractor </p>
+        </div>
+    </div>
+</div>
+
 
 <script>
 window.onload = function() {myFunction()};
@@ -532,6 +629,14 @@ const observer = new IntersectionObserver(entries => {
 observer.observe(document.querySelector('.square-wrapper'));
 
 
+/* progress bar*/ 
+let progress = document.getElementById('progressbar');
+let totalHeight = document.body.scrollHeight - window.innerHeight;
+window.onscroll = function()
+	{
+		let progressHeight = (window.pageYOffset / totalHeight) *100;
+    	progress.style.width = progressHeight + "%";
+	}
 
 
 
