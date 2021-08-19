@@ -482,6 +482,7 @@ z-index: 5001;
  position: relative;
  width: 100%;
  margin 20px 0;
+ min-height: 40vh;
 }
 
 .company_about h2
@@ -492,7 +493,10 @@ z-index: 5001;
 
 .company_about_holder
 {
+
+ /*background-image: url("C:/Users/Tiffany%20McDonald/Desktop/background_green.png");*/
  background-image: url("https://www.cei.com/assets/blue-bkgd.png");
+ background-color: #000;
  background-size: cover;
  background-position: center center;
   
@@ -503,7 +507,42 @@ z-index: 5001;
  width: 100%;
  margin-left: 30px;
  margin-right: 30px;
+ 
 }
+.company_about_wrapper h3
+{
+ color: #fff;
+ text-align: center;
+}
+
+.company_about_container {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row
+}
+
+.company_about_info {
+    width: 33%;
+    text-align: center;
+    padding: 10px 40px;
+    border-right: dashed 2px rgba(255,255,255,0.5);
+}
+company_about_info h3 {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 10px;
+}
+.company_about_info p {
+ color: #fff;
+ font-family: "Gotham A","Gotham B","Raleway",sans-serif;
+ 
+}
+
 
 </style>
 </head>
@@ -591,7 +630,19 @@ z-index: 5001;
 	<h2>Who We Are...</h2>
     <div class="company_about_holder">
     	<div class="company_about_wrapper">
-        <p> Atlanta's Premier Commercial Electrical Contractor </p>
+        <h3> Atlanta's Premier Commercial Electrical Contractor </h3>
+        	<div class="company_about_container">
+            	<div class="company_about_info">
+                	<h3>Test1</h3>
+                </div>
+                <div class="company_about_info">
+                	<h3>Continued Excellence</h3>
+                    <p>2020 NECA Project Excellence Award Winner</p>
+                </div>
+                <div class="company_about_info">
+                	<h3>Test3</h3>
+                </div>
+            </div>
         </div>
     </div>
 </div>
