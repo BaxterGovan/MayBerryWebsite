@@ -720,7 +720,13 @@ z-index: 5001;
     width: 33%;
     text-align: center;
     padding: 10px 40px;
-    border-right: dashed 2px rgba(255,255,255,0.5);
+    
+}
+.company_about_info_2 {
+    width: 33%;
+    text-align: center;
+    padding: 10px 40px;
+    border-left: dashed 2px rgba(255,255,255,0.5);
 }
 company_about_info h3 {
     margin-top: 0;
@@ -730,17 +736,53 @@ company_about_info h3 {
     line-height: 36px;
     margin-bottom: 10px;
 }
+
+.company_about_info_2 p {
+ color: #fff;
+ font-family: "Gotham A","Gotham B","Raleway",sans-serif;
+}
+
 .company_about_info p {
  color: #fff;
  font-family: "Gotham A","Gotham B","Raleway",sans-serif;
  
 }
 
+@media (max-width: 700px)
+{
+ .company_about_container {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    display: flex; 
+    flex-direction: column
+ }
+.company_about_info {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+ }
+
+ .company_about_info_2 {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-left: dashed 0px rgba(255,255,255,0.5);
+    border-top: dashed 2px rgba(255,255,255,0.5);
+ }
+
+}
+
+
+
+/* Footer style starts here*/
+
 .footer {
  width: 100%;
  height: 550px;
 }
-
 
 .nectar-shape-divider-wrap {
  position: relative;
@@ -915,11 +957,11 @@ company_about_info h3 {
             	<div class="company_about_info">
                 	<h3>Test1</h3>
                 </div>
-                <div class="company_about_info">
+                <div class="company_about_info_2">
                 	<h3>Continued Excellence</h3>
                     <p>2020 NECA Project Excellence Award Winner</p>
                 </div>
-                <div class="company_about_info">
+                <div class="company_about_info_2">
                 	<h3>Test3</h3>
                 </div>
             </div>
