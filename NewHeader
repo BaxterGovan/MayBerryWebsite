@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 *
@@ -30,6 +31,7 @@ nav {
   background-color: rgba(105, 105, 105, 0.7);
   color: #006600;
   z-index: 5000;
+  
 }
 
 nav .logo {
@@ -53,15 +55,13 @@ nav ul {
  margin-right: 40px;
  margin-top: 10px;
  position: relative;
- height: 50px;
 }
 
 nav ul li {
  float: left;
  display: inline-block;
- height: 60px;
  margins: 0 5px;
- 
+// height: 60px;
 }
 
 nav ul li a {
@@ -100,32 +100,27 @@ nav ul li:hover > ul{
 top: 50px;
  opacity: 1;
  visibility: visible;
+
 }
 
 nav ul ul li {
  position: relative;
  margin: 0px;
  width: 150px;
+ height: fit-content;
  background-color: black;
  float: none;
  display: list-item;
  border-bottom: 1px solid rgba(0,0,0,0.3);
  
 }
-nav ul ul li .special{
- font-size: 13px;
- word-wrap: break-word;
  
-}
 
 nav ul ul li a{
  line-height: 60px;
- word-wrap: break-word;
  display: inline-block;
  font-size: 17px;
 
- 
- 
 }
 
 nav ul ul ul li {
@@ -136,9 +131,108 @@ nav ul ul ul li {
  width: 150px; 
 }
 
-i .fa-caret-down {
- border-top-width: 0;
- border-bottom: 4px solid #fff;
+.show, .icon, input{
+ display: none;
+}
+
+@media (min-width: 969px) {
+
+nav ul li {
+ height: 60px;
+}
+
+}
+@media all and (max-width: 968px) {
+ nav ul{ 
+  margin-left: 0px;
+  float: left;
+ }
+ nav ul a{ 
+  margin-left: 25px;
+  
+ }
+ nav .logo {
+  padding-left: 30px;
+  width: 100%;
+ }
+ 
+ nav ul li, nav ul ul li {
+  display: block;
+  width: 100%;
+ }
+
+ nav ul ul {
+  top: 70px;
+  position: static;
+  border-top: none;
+  float: none;
+  opacity: 1;
+  visibility:visible;
+ }
+ 
+ nav ul ul ul li {
+  position: static;
+  background-color: rgba(105, 105, 105, 0.7);
+  width: 100%;
+  
+ }
+ 
+ nav ul ul li {
+  border-bottom: 0px;
+  background-color: rgba(105, 105, 105, 0.7);
+  width: 120%;
+  
+ }
+ 
+ nav ul ul a {
+  padding-left: 40px;
+ }
+ 
+ nav ul ul ul a {
+  padding-left: 80px;
+ }
+ 
+ .show {
+  display: block;
+  color: white;
+  font-size: 18px;
+  padding: 0 20px;
+  line-height: 70px;
+  cursor: pointer;
+  padding-left: 40px;
+ }
+ 
+ ul ul .show{
+  padding-left: 65px;
+ }
+ 
+ .icon {
+  display: block;
+  color: white;
+  position: absolute;
+  right: 40px;
+  line-height: 70px;
+  font-size:25px;
+  cursor: pointer;
+  
+ }
+ 
+ nav ul li a:hover {
+  box-shadow: none;
+ }
+ 
+ .show:hover{
+  color: green;
+ }
+
+ .show + a, ul{ 
+  display: none;
+ }
+
+[id^=btn]:checked + ul{
+ display: block;
+}
+
 }
 
 
@@ -147,12 +241,16 @@ i .fa-caret-down {
 <body>
 <nav>
 	<div class="logo">MAYBERRY ELECTRIC, INC.</div>
+    <label for="btn" class="icon">
+    	<span class="fa fa-bars"></span>
+    </label>
+    <input type="checkbox" id="btn">
 	<ul>
     	<li><a href="#">Home</a></li>
         <li>
-        	<a href="#">About Us
-            	
-            </a>
+        	<label for="btn-1" class="show">About Us +</label>
+        	<a href="#">About Us</a>
+            <input type="checkbox" id="btn-1">
             <ul>
             	<li><a href="#">Partners</a></li>
                 <li><a href="#">Awards</a></li>
@@ -161,11 +259,15 @@ i .fa-caret-down {
             </ul>
         </li>
         <li>
+        	<label for="btn-2" class="show">Services +</label>
         	<a href="#">Services</a>
+            <input type="checkbox" id="btn-2">
             <ul>
             	<li><a href="#">Construction</a></li>
                 <li>
+                	<label for="btn-5" class="show">Service +</label>
                 	<a href="#">Service</a>
+                    <input type="checkbox" id="btn-5">
                     	<ul>
                         	<li><a href="#">EPM</a></li>
                             <li><a href="#">Maintenance</a></li>
@@ -178,20 +280,24 @@ i .fa-caret-down {
             </ul>
         </li>
         <li>
+        	<label for="btn-3" class="show">Projects +</label>
         	<a href="#">Projects</a>
+            <input type="checkbox" id="btn-3">
             <ul>
             	<li><a href="#">Commercial</a></li>
                 <li><a href="#">Medical</a></li>
                 <li><a href="#">Data Center</a></li>
                 <li><a class="special" href="#">Theatre/Sound Stage</a></li>
-                <li><a href="#">Critical Power</a></li>
+                <li><a class="special2" href="#">Critical Power</a></li>
             </ul>
         </li>
         <li>
+        	<label for="btn-4" class="show">People +</label>
         	<a href="#">People</a>
+            <input type="checkbox" id="btn-4">
             <ul>
             	<li><a href="#">Our Team</a></li>
-                <li><a href="#">Job Opportunities</a></li>
+                <li><a href="#">Career</a></li>
             </ul>
         </li>
         <li><a href="#">Contact Us</a></li>
