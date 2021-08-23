@@ -874,7 +874,7 @@ text-align: center;
 
 /* review cards */
 
-section
+.section_swiper
 {
  position: relative;
  width: 95%;
@@ -991,6 +991,48 @@ section
 .swiper-container-3d .swiper-slide-shadow-left,
 .swiper-container-3d .swiper-slide-shadow-right{
  background-image: none;
+}
+
+/* Partner Images*/
+
+
+.image-mosaic {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: 120px;
+}
+
+.image-mosaic .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backgr/ound: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  hei/ght: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  b/ackground-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 600px) {
+  .image-mosaic .card-tall {
+    grid-row: span 2 / auto;
+  }
+
+  .image-mosaic .card-wide {
+    grid-column: span 2 / auto;
+  }
 }
 
 
@@ -1133,7 +1175,35 @@ section
     	</div>
 </div>
 
+
+
 <div style="height:800px;background-color:gray;">This div is only here to enable scrolling (height = 800 pixels).</div>
+<br>
+
+
+<div class="image-mosaic">
+  <div
+    class="card"
+    style="background-image: url('https://www.mayberryelectric.com/uploads/8/8/5/6/8856990/4312190.png')"
+  ></div>
+  <div
+    class="card card-wide"
+    style="background-image: url('https://www.mayberryelectric.com/uploads/8/8/5/6/8856990/9383378_orig.png')"
+  ></div>
+  <div
+    class="card card-wide"
+    style="background-image: url('https://www.mayberryelectric.com/uploads/8/8/5/6/8856990/2087025.jpg')"
+  ></div>
+  <div
+    class="card card-wide"
+    style="background-image: url('https://www.mayberryelectric.com/uploads/8/8/5/6/8856990/8539827.jpg?358')"
+  ></div>
+  <div
+    class="card card-wide"
+    style="background-image: url('https://www.mayberryelectric.com/uploads/8/8/5/6/8856990/7852480.jpg?321')"
+  ></div>
+</div>
+
 <br>
 <div class="company_about">
 	<h2>Who We Are...</h2>
@@ -1159,7 +1229,7 @@ section
 
 <br>
 
-<section>
+<div class="section_swiper">
 <div class="swiper-container mySwiper">
 <h2>Our Customers Love What we Do</h2>
       <div class="swiper-wrapper">
@@ -1211,7 +1281,7 @@ section
         
       </div>
     </div>
-</section>
+</div>
 
 
 <br>
