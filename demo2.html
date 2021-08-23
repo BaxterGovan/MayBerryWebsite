@@ -3,6 +3,8 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 *
@@ -240,6 +242,7 @@ body {
  transition: bottom .3s;
  
 }
+
 
 }
 
@@ -779,11 +782,6 @@ company_about_info h3 {
 
 /* Footer style starts here*/
 
-.footer {
- width: 100%;
- height: 550px;
-}
-
 .nectar-shape-divider-wrap {
  position: relative;
  width: 100%;
@@ -800,10 +798,199 @@ company_about_info h3 {
  position: absolute;
 }
 
+.footer {
+ width: 100%;
+ height: 100%;
+}
+
 .footer_bottom {
  width: 100%;
  height: 100%;
  background-color: rgba(0,102,0,0.875);
+ display: flex;
+ color: #fff;
+ justify-content: center;
+ flex-wrap: wrap;
+ margin: 0 auto;
+}
+
+.text_column {
+ display: flex;
+ flex-direction: column;
+ margin-right: 4rem;
+ padding-bottom: 20px;
+}
+
+
+.text_column h2
+{
+ text-align: center;
+ color: #fff;
+ text-transform: uppercase;
+ line-height: 1em;
+ padding: 10px 40px;
+ font-size: 20px;
+}
+
+.text_column a
+{
+text-align: center;
+ margin-bottom: 0.5rem;
+ font-size: 16px;
+ color: #fff;
+ text-decoration: none;
+}
+
+.text_column a:hover
+{
+
+ color: #999999;
+ 
+}
+
+.text_column h3
+{
+text-align: center;
+ margin-bottom: 0.5rem;
+ font-size: 20px;
+ color: #fff;
+
+}
+.text_column p
+{
+ font-size: 16px;
+ margin-bottom: 0.5rem;
+ color: #fff;
+}
+
+.text_column img{
+ position: relative;
+ height: 200px;
+ 
+}
+
+
+
+
+/* review cards */
+
+section
+{
+ position: relative;
+ width: 95%;
+ margin-left: 2.5%;
+ min-height: 50vh;
+ border-radius: 10px;
+ border: solid gray 2px;
+ display: flex;
+ jusitfy-content: center;
+ align-items: center;
+ background: #003300;
+ overflow: hidden;
+}
+
+.swiper-container {
+ width: 100%;
+ padding-top: 50px;
+ padding-bottom: 50px;
+}
+
+.swiper-container h2 {
+ color: #fff;
+ text-transform: uppercase;
+ text-align: center;
+ font-size: 1.5em;
+ line-height: 1em;
+}
+
+.swiper-slide {
+ background-position: center;
+ background-size: cover;
+ width: 450px;
+ height: 500px;
+ box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+ filter: blur(0.5px);
+ background: #e6ffe6;
+}
+.swiper-slide-active {
+ filter:blur(0px);
+ background: #fff;
+}
+
+.swiper-slide img 
+{
+ display: block;
+ width: 30px;;
+ height: 30px;
+ object-fit: cover;
+}
+
+.testimonialBox
+{
+ position: relative;
+ width: 100%;
+ padding: 20px;
+ padding-top: 45px;
+ color: #999;
+}
+.testimonialBox p
+{
+ font-size: 25px;
+}
+
+.testimonialBox .quote
+{
+ position: absolute;
+ top: 20px;
+ right: 30px;
+ opacity: 0.2;
+}
+
+.testimonialBox .details
+{
+ display: flex;
+ align-items: center;
+ margin-top: 20px;
+}
+
+.testimonialBox .details .imgbox
+{
+ position: relative;
+ width: 60px;
+ height: 60px;
+ border-radius: 50%;
+ overflow: hidden;
+ margin-right: 10px;
+}
+
+.testimonialBox .details .imgbox img
+{
+ postition: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
+.testimonialBox .details h3
+{
+ font-size: 20px;
+ font-weight: 400;
+ letter-spacing: 1px;
+ color: #006600;
+ line-height: 1.1em;
+}
+
+.testimonialBox .details span
+{
+ font-size: 16px;
+ color: #666;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right{
+ background-image: none;
 }
 
 
@@ -817,7 +1004,7 @@ company_about_info h3 {
 <div id="progressbar"></div>
 <div id="scrollPath"></div>
 	<div class="logo">MAYBERRY ELECTRIC, INC.</div>
-    <label for="btn" class="icon" onclick="changeNav()">
+    <label for="btn" class="icon" onclick="/changeNav()">
     	<span class="fa fa-bars"></span>
     </label>
     <input type="checkbox" id="btn">
@@ -933,7 +1120,7 @@ company_about_info h3 {
             			<p>Safety and Satisfaction are Our #1 Priorities </p>
             			<a class="container_link" href="#">Read More</a>
             		</div>
-            		<img href="#" src="https://banner2.cleanpng.com/20180411/tuw/kisspng-electrician-architectural-engineering-stock-photog-spanner-5acdd1f4727b16.4449607615234380684689.jpg">              
+            		<img href="#" src="https://previews.dropbox.com/p/thumb/ABRlo8leDUZ4Hteuj5aoPNe4ylWr1_TE1-Wk6qHMngucns-xW0_Yeh3OSs_umb9fadbkuAHf0DtJYFVpSmSg3lkqLv1NgDE8oxTRWDyjSGRXisxpLUV6uHeeU7HYvYZpzgqQj34yJSqAijxk3ghcad4cdPxfCzOFK1_nTx3xmLJpExFD0M9pyTR1oMe27IJ1SmBl1xIiierAJSxFNDAGMFYc7aNqcqAYH5tGYiBfd5TVaVUTiU8fk0mM-cEoiBpSP8JYUvKXuYCB-J8vgxw_cUBahqhs36xpBO07eMtL-otGD0CY-YZxpJtrkt36cNUFUHE5wLOSei0HAId2V7uRHYIzOhlkz8GtVMRXwl8AWIKEig/p.png?fv_content=true&size_mode=5">              
         	</div>
         	<div class="card">
         		<div class="content">
@@ -972,6 +1159,63 @@ company_about_info h3 {
 
 <br>
 
+<section>
+<div class="swiper-container mySwiper">
+<h2>Our Customers Love What we Do</h2>
+      <div class="swiper-wrapper">
+      
+        <div class="swiper-slide">
+        	<div class="testimonialBox">
+            	<img src="https://image.flaticon.com/icons/png/512/59/59149.png" class="quote" >
+                <div class="content">
+                	<p> MEI IS GOOD COMPANY SPEND MONEY ON US YOU GET BIG RETURN ON INVESTMENT</p>
+                    <div class="details">
+                    	<div class="imgbox">
+                    		<img src="https://media.istockphoto.com/photos/portrait-concept-picture-id1016761216?k=6&m=1016761216&s=612x612&w=0&h=j-DyZTSqmnhoHKsJdGmiMPnungpHiq9UTrvx4UylMQI=">
+                        </div>
+                        <h3> Insert Name<br><span>Insert Role</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="swiper-slide">
+        	<div class="testimonialBox">
+            	<img src="https://image.flaticon.com/icons/png/512/59/59149.png" class="quote" >
+                <div class="content">
+                	<p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <div class="details">
+                    	<div class="imgbox">
+                    		<img src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                        </div>
+                        <h3> Insert Name<br><span>Insert Role</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="swiper-slide">
+        	<div class="testimonialBox">
+            	<img src="https://image.flaticon.com/icons/png/512/59/59149.png" class="quote" >
+                <div class="content">
+                	<p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <div class="details">
+                    	<div class="imgbox">
+                    		<img src="https://images.squarespace-cdn.com/content/v1/584b0ec1d2b8577118027730/1500837764228-1OCRREO84AJ00V1Z4V2S/PTTP1.jpg">
+                        </div>
+                        <h3> Insert Name<br><span>Insert Role</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+</section>
+
+
+<br>
+
 
 <div class="footer">
 	<div class="nectar-shape-divider-wrap"  data-height="250" data-front="" data-style="curve_opacity" >
@@ -982,7 +1226,42 @@ company_about_info h3 {
 		</svg>
 	</div>
     <div class="footer_bottom">
-    	
+    	<div class="text_column">
+        	<img src="https://previews.dropbox.com/p/thumb/ABRTweKbI7rZkGwJdoPpR2pwSVBctlkoBpxpe3JNxHn5qc7-rPuJklkKkNtJ8SGAM0i4ADbX0aIBwzunQ6B6PlrPEvyCBYp4ETvj1HPkfv9tITVatFmJ-SNQf5MFXxIYsoO97lsyBMmERAhZvWl5ircS2C8MSAIjLSKAzYV4ulWQkvp1xXIlg02lvKQJ1Y63Haqpxeenyzr0VxZ9LOrxEpspUYnVW8yUZbZ3F3x0SIF-8m4jkOc4EV_jhbww3r3KJez7q9CN2WxeQk9eQ7GmPO13pNKnhmkhK4Dox4rc-swkjcVPlytM9Vhyi7tn2p4tfL_fRPwm7shNK7mUoXldossk3-6sK0A_XblJcoh_PoLpfQ/p.png?fv_content=true&size_mode=5" style="padding-top: 10px;">
+            <br>
+       		<img src="https://www.mayberryelectric.com/uploads/8/8/5/6/8856990/neca-award-image_orig.png" style="margin-top: -10px;">
+    	</div>
+    	<div class="text_column footer-1">
+        	<h2>Company</h2>
+            <a href="#">About Us</a>
+            <a href="#">Job Opportunities</a>
+            <br>
+            <h2>Contact Us</h2>
+            <h3>Main Phone (404) 799-3334</h3>
+            <h3>24/7 Hotline (404) 645-7373</h3>
+            <p>2126 Defoors Ferry Rd NW, Atlanta, GA 30318</p>
+        </div>
+        <div class="text_column footer-2">
+        	<h2>Services</h2>
+            <a href="#">Construction</a>
+            <a href="#">Service</a>
+            <a href="#">Design</a>
+            <a href="#">Insurance</a>
+        </div>
+        <div class="text_column footer-3">
+        	<h2>Projects</h2>
+            <a href="#">Commercial</a>
+            <a href="#">Medical</a>
+            <a href="#">Data Center</a>
+            <a href="#">Theatre/Sound Stage</a>
+            <a href="#">Critical Power</a>
+        </div>
+        
+    </div>
+    <div style="background-color: rgba(0,102,0,0.875); text-align: center;">
+    <p style="font-size:14px; color:#fff;">© 2021 Mayberry Electric Incorporated.
+    <a href="#" style="color:#fff; text-decoration: none;"> Website Design by Baxter Govan</a>	  
+    </p>
     </div>
 </div>
 
@@ -990,6 +1269,7 @@ company_about_info h3 {
 
 
 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <script>
 
@@ -1007,6 +1287,8 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -1066,11 +1348,35 @@ function showSlides(n) {
 
 
 function changeNav() {
-  document.getElementById("navbar").style.color = "red";
+if(navbar.classList.contains("sticky"))
+{
+	navbar.classList.remove("sticky");
 }
+else
+{	navbar.classList.add("sticky");
+}
+
+}
+
+var swiper = new Swiper(".mySwiper", {
+	effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+    	rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+    loop: true,
+	});
 
 
 </script>
+
+
 
 </body>
 </html>
