@@ -128,6 +128,10 @@ body {
  display: none;
 }
 
+.show1{
+ display: none;
+}
+
 
 @media (min-width: 969px) {
 
@@ -191,7 +195,17 @@ body {
   padding-left: 80px;
  }
  
- .show {
+.show {
+  display: block;
+  color: white;
+  font-size: 18px;
+  padding: 0 20px;
+  line-height: 70px;
+  cursor: pointer;
+  padding-left: 40px;
+ }
+
+ .show1 {
   display: block;
   color: white;
   font-size: 18px;
@@ -201,7 +215,11 @@ body {
   padding-left: 40px;
  }
  
- ul ul .show{
+ul ul .show{
+  padding-left: 65px;
+ }
+
+ ul ul .show1{
   padding-left: 65px;
  }
  
@@ -220,11 +238,19 @@ body {
   box-shadow: none;
  }
  
- .show:hover{
+.show:hover{
   color: green;
  }
 
- .show + a, ul{ 
+ .show1:hover{
+  color: green;
+ }
+
+.show + a, ul{ 
+  display: none;
+ }
+
+ .show1 + a{ 
   display: none;
  }
 
@@ -1342,37 +1368,127 @@ text-align: center;
 
 /* clients */
 
-.client_box {
-  background-color: lightgrey;
-  color: #fff;
-  border-radius: 5px;
-  font-size: 100%;
-  height: 150px;
-}
-
-.client_box .client_logo{
- height: 100%;
- width: 100%;
- object-fit: contain;
- transition: 0.5s;
- background-image: auto;
- background-position: center;
- background-repeat: no-repeat;
+.client_thumbnails_container {
+ width: 80%;
+ margin-left: 10%;
+ 
  
 }
 
-.client_wrapper {
+.client_thumbnails {
+  overflow: hidden;
   margin-top: 100px;
-  margin-bottom: 200px;
-  
-  width: 90%;
-  height: 500px;
-  display: grid;
-  grid-gap: 40px;
-  grid-template-columns: repeat(5, 20%);
-  grid-template-rows: repeat(5, 19%);
-  grid-auto-flow: column;
+}
+.client_thumbnails li {
+  float: left;
+  width: 25%;
+  position: relative;
+  margin-top: 10px;
+  min-height: 100px;
+  background-color: #fff;
+  overflow: hidden;
+  border: 0px solid #ccc;
 }
 
 
+.client_thumbnails li img {
+  max-width: 100%;
+  display: block;
+  position: absolute;
+  max-height: 100px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  transition: 0.5s;
+  filter: grayscale(100%);
+}
+
+.client_thumbnails li:hover img {
+  filter: grayscale(0%);
+}
+
+
+
+
+@media (max-width: 968px) {
+
+.client_thumbnails li {
+  width: 50%;  
+}
+
+.client_thumbnails_container ul {
+  display: block;
+}
+
+}
+
+
+/* Tabs Projects Image Gallery */
+
+
+
+
+
+.projects_container {
+
+ width:100%;
+}
+
+.projects_wrapper {
+ width: 70%;
+ margin-left: 15%;
+}
+
+.projects_thumbnails_container {
+ width: 100%;
+ mar/gin-left: 10%;
+ 
+ 
+}
+
+.projects_thumbnails {
+  overflow: hidden;
+  margin-top: 10px;
+}
+.projects_thumbnails li {
+  float: left;
+  width: 23%;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 1%;
+  margin-right: 1%;
+  min-height: 150px;
+  background-color: #fff;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+
+.projects_thumbnails li img {
+  max-width: 100%;
+  display: block;
+  position: absolute;
+  max-height: 100px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  transition: 0.5s;
+}
+
+
+@media (max-width: 968px) {
+
+.projects_thumbnails li {
+  width: 45%;  
+}
+
+.projects_thumbnails_container ul {
+  display: block;
+}
+
+.projects_container ul {
+  display: block;
+}
+
+}
 
