@@ -29,12 +29,17 @@ body {
 }
 
 #navbar .logo {
- float: left;
- color: #006600;
- font-size: 27px;
- font-weight: 600;
- line-height: 70px;
- padding-left: 40px;
+float: left;
+ height: 80px;
+ width: 300px;
+} 
+
+#navbar .logo img {
+    max-width: 100%; 
+    display: block;
+    position: relative;
+    max-height: 100%;
+    transition: 0.5s;
 }
 
 #navbar:after {
@@ -46,7 +51,7 @@ body {
 #navbar ul {
  float: right; 
  list-style: none;
- margin-right: 40px;
+ margin-ri/ght: 5px;
  margin-top: 10px;
  position: relative;
 }
@@ -124,12 +129,18 @@ body {
  width: 150px; 
 }
 
-.show, .icon, input{
+#navbar .show, #navbar .icon, #navbar input{
  display: none;
 }
 
 .show1{
  display: none;
+}
+
+#navbar [id^=btn]:checked ~ logo img {
+
+ max-width: 50%;
+ top: 10%;
 }
 
 
@@ -143,9 +154,27 @@ body {
 @media all and (max-width: 968px) {
  #navbar{
  background-color: rgba(106,106,106);
+ he/ight: 100px;
+
  }
  
- 
+#navbar .logo {
+ height: 80px;
+ width: 300px;
+} 
+
+#navbar .logo img {
+     
+    display: block;
+    position: relative;
+    max-height: 100%;
+    top: 0%;
+    transform: translate(0%, 0%);
+     left: 0%; 
+    transition: 0.5s;
+
+}
+
  #navbar ul{ 
   margin-left: 0px;
   float: left;
@@ -154,12 +183,9 @@ body {
   margin-left: 25px;
   
  }
- #navbar .logo {
-  padding-left: 30px;
-  width: 100%;
- }
- 
- #navbar ul li, nav ul ul li {
+
+
+ #navbar ul li, #navbar ul ul li {
   display: block;
   width: 100%;
  }
@@ -195,7 +221,7 @@ body {
   padding-left: 80px;
  }
  
-.show {
+#navbar .show {
   display: block;
   color: white;
   font-size: 18px;
@@ -205,7 +231,7 @@ body {
   padding-left: 40px;
  }
 
- .show1 {
+ #navbar .show1 {
   display: block;
   color: white;
   font-size: 18px;
@@ -215,15 +241,15 @@ body {
   padding-left: 40px;
  }
  
-ul ul .show{
+#navbar ul ul .show{
   padding-left: 65px;
  }
 
- ul ul .show1{
+ #navbar ul ul .show1{
   padding-left: 65px;
  }
  
- .icon {
+ #navbar .icon {
   display: block;
   color: white;
   position: absolute;
@@ -231,6 +257,8 @@ ul ul .show{
   line-height: 70px;
   font-size:25px;
   cursor: pointer;
+ top: 10px;
+z-index: 8000;
   
  }
  
@@ -238,30 +266,32 @@ ul ul .show{
   box-shadow: none;
  }
  
-.show:hover{
+#navbar .show:hover{
   color: green;
  }
 
- .show1:hover{
+ #navbar .show1:hover{
   color: green;
  }
 
-.show + a, ul{ 
+#navbar .show + a, #navbar ul{ 
   display: none;
  }
 
- .show1 + a{ 
+ #navbar .show1 + a, #navbar ul{ 
   display: none;
  }
 
-[id^=btn]:checked + ul{
+#navbar [id^=btn]:checked + ul{
  display: block;
  transition: bottom .3s;
  
 }
 
 
+
 }
+
 
 
 .content {
@@ -317,7 +347,7 @@ background-position: center center;
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none; z-index: 1;}
-img {vertical-align: middle; z-index: 1;}
+.content-sw img {vertical-align: middle; z-index: 1;}
 
 /* Slideshow container */
 .slideshow-container {
@@ -432,19 +462,19 @@ img {vertical-align: middle; z-index: 1;}
 }
 
 /* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
+.fade-ss {
+  -webkit-animation-name: fade-ss;
   -webkit-animation-duration: 1.5s;
-  animation-name: fade;
+  animation-name: fade-ss;
   animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade {
+@-webkit-keyframes fade-ss {
   from {opacity: 1} 
   to {opacity: 1}
 }
 
-@keyframes fade {
+@keyframes fade-ss {
   from {opacity: 1} 
   to {opacity: 1}
 }
@@ -493,7 +523,7 @@ img {vertical-align: middle; z-index: 1;}
 }
 
 .fixed-bg1 {
-  background-image: url("https://www.mayberryelectric.com/uploads/8/8/5/6/8856990/view-from-bridge-2_orig.jpg");
+  background-image: url("https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/240125104_10158820852846725_2875035085638677318_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=973b4a&_nc_ohc=7Vs-y-7aDZgAX_26Xgh&_nc_ht=scontent-atl3-1.xx&oh=936f7659aaa883635813c46079357b23&oe=6133C145");
   min-height: 900px;
   width: 100%;
   background-attachment: fixed;
@@ -503,7 +533,7 @@ img {vertical-align: middle; z-index: 1;}
 }
 
 .fixed-bg2 {
-  background-image: url("https://www.mayberryelectric.com/uploads/8/8/5/6/8856990/6073908_orig.jpg");
+  background-image: url("https://scontent-atl3-1.xx.fbcdn.net/v/t1.6435-9/p960x960/83815500_10157363472471725_7154994470902038528_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=36a2c1&_nc_ohc=dveEwwAcbiAAX_FN76v&_nc_ht=scontent-atl3-1.xx&oh=284d09faafbb2d7267a5d6a9d15d3a9b&oe=61539EEC");
   min-height: 900px;
   width: 100%;
   background-attachment: fixed;
@@ -513,7 +543,7 @@ img {vertical-align: middle; z-index: 1;}
 }
 
 .fixed-bg3 {
-  background-image: url("https://www.mayberryelectric.com/uploads/8/8/5/6/8856990/99768_orig.jpg");
+  background-image: url("https://www.mayberryelectric.com/uploads/8/8/5/6/8856990/view-from-bridge-2_orig.jpg");
   min-height: 900px;
   width: 100%;
   background-attachment: fixed;
@@ -522,12 +552,93 @@ img {vertical-align: middle; z-index: 1;}
   background-size: cover;
 }
 
+/* This is where the tab icons are created */
+
+.tb-container {
+ width: 100%;
+ margin-top: 100px;
+ margin-bottom: 100px;
+ height: 550px;
+ background-color: #ddd;
+}
+
+.tab-col-icons {
+  float: left;
+  border: 0px solid #ccc;
+  backgrou/nd-color: #fff;
+  width: 100px;
+  height: 550px;
+  margin-left: 5%;
+  
+}
+
+/* Style the buttons inside the tab */
+.tab-col-icons button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100px;
+height: 100px;
+margin-bottom: 10px;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  border-radius: 50%;
+}
+
+.tab-col-icons button img
+{
+ postition: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: contain;
+ transition: 0.5s;
+ 
+}
+
+/* Change background color of buttons on hover */
+.tab-col-icons button:hover {
+  background-color: #33cc33;
+ box-shadow: 0 0 50px rgba(0,255,0,1);
+}
+
+/* Create an active/current "tab button" class */
+.tab-col-icons button.active {
+  background-color: #33cc33;
+ box-shadow: 0 0 10px rgba(0,255,0,1);
+}
+
+/* Style the tab content */
+.tabcontent-container {
+  padding: 0px 12px;
+  border: 0px solid #ccc;
+  width: 85%;
+  border-left: none;
+  height: 100%;
+	display: block;
+}
+
+.tabcontent-container img {
+margin-top: 25px;
+ float: right;
+ height: 500px;
+ position: relative;
+ 
+}
+
 
 /* This is where the box display styles are at */
 
 .cardContain
 {
  display: flex;
+wid//th: 100%;
  justify-content: center;
  align-items: center;
  min-height: 60vh;
@@ -540,12 +651,14 @@ img {vertical-align: middle; z-index: 1;}
  display: flex;
  justify-content: center;
  align-items: center;
+wid//th: 100%;
 }
 
 .container .card
 {
  position: relative;
  width: 550px;
+wid/th: 33%;
  height: 350px;
  border-radius: 10px;
  margin: 20px;
@@ -839,6 +952,12 @@ company_about_info h3 {
 
 /* Footer style starts here*/
 
+
+.look-container {
+height: 500px;
+}
+
+
 .nectar-shape-divider-wrap {
  position: relative;
  width: 100%;
@@ -937,6 +1056,14 @@ text-align: center;
 
 }
 
+@media (max-width: 968px)
+{
+
+.look-container {
+ height: 1000px;
+}
+
+}
 
 
 
@@ -1371,7 +1498,8 @@ text-align: center;
 .client_thumbnails_container {
  width: 80%;
  margin-left: 10%;
- 
+ margin-top: 10%;
+ margin-bottom: 150px;
  
 }
 
@@ -1399,8 +1527,14 @@ text-align: center;
   top: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
-  transition: 0.5s;
-  filter: grayscale(100%);
+  transition: .5s;
+  filter: grayscale(1000%);
+  opacity: 0;
+}
+
+.client_thumbnails li img.active {
+  opacity: 1;
+ 
 }
 
 .client_thumbnails li:hover img {
@@ -1437,7 +1571,39 @@ text-align: center;
 .projects_wrapper {
  width: 70%;
  margin-left: 15%;
+ 
 }
+.projects_LW {
+ justify-items: center;
+ align-items: center;
+ width: 30%;
+ height: 450px;
+ background-color: #006600;
+ float: left;
+}
+.projects_LW li {
+position: relative;
+width: 100%;
+align-text: center;
+margin-top: 48px;
+font-size: 15px;
+}
+
+.projects_LW li:hover a {
+ color: black; 
+ 
+}
+
+.projects_LW li a {
+ color: #fff;
+}
+
+.projects_RW {
+ width: 70%;
+height: 450px;
+ float: right;
+}
+
 
 .projects_thumbnails_container {
  width: 100%;
@@ -1455,10 +1621,10 @@ text-align: center;
   width: 23%;
   position: relative;
   margin-top: 10px;
-  margin-left: 1%;
-  margin-right: 1%;
-  min-height: 150px;
-  background-color: #fff;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  min-height: 200px;
+  background-color: #aaa;
   overflow: hidden;
   border: 1px solid #ccc;
 }
@@ -1468,7 +1634,7 @@ text-align: center;
   max-width: 100%;
   display: block;
   position: absolute;
-  max-height: 100px;
+  max-height: 150px;
   top: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -1490,5 +1656,373 @@ text-align: center;
   display: block;
 }
 
+.projects_wrapper {
+ width: 90%;
+ margin-left: 5%;
+ 
 }
+
+}
+
+@media (max-width: 730px) {
+.projects_LW {
+ justify-items: center;
+ align-items: center;
+ width: 100%;
+ height: 150px;
+ background-color: #006600;
+ float: left;
+}
+
+.projects_LW ul {
+ border-bottom: 0px;
+
+}
+
+.projects_LW li {
+display: block;
+ margin-left: 20px;
+width: auto;
+align-text: center;
+margin-top: 0px;
+font-size: 15px;
+}
+.projects_RW {
+ width: 100%;
+ height: auto;
+}
+
+.projects_thumbnails_container {
+  margin-left: 5%;
+}
+
+
+
+}
+
+
+
+.contact-pg-container { 
+ position: relative;
+ min-height: 100vh;
+ padding: 50px 100px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ background: url("https://scontent-atl3-1.xx.fbcdn.net/v/t1.6435-9/118727147_10158050073541725_1272797742922705950_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=973b4a&_nc_ohc=v318PJCoCy8AX8RdbWz&_nc_ht=scontent-atl3-1.xx&oh=00e0da0e4612cbd63ddf09cce0c9397e&oe=6156CDED");
+ background-size: cover;
+ 
+}
+
+.contact-pg-container .contact-pg {
+ max-width: 800px;
+ text-align: center;
+}
+
+.contact-pg-container .contact-pg h2 {
+ font-size: 36px;
+ font-weight: 500;
+ color: #fff;
+}
+
+.contact-pg-container .contact-pg p {
+ 
+ font-weight: 300;
+ color: #fff;
+}
+
+.contact-inf-container { 
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 30px;
+}
+
+.contact-inf-container .contact-inf {
+ width: 50%;
+ display: flex;
+ flex-direction: column;
+}
+
+.contact-inf-container .contact-inf .box {
+ position: relative;
+ padding: 20px; 0;
+ display: flex;
+}
+
+.contact-inf-container .contact-inf .box-inf .icon {
+ width: 80px;
+ height: 80px;
+ background: #fff;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 50%;
+ font-size: 22px;
+}
+.contact-inf-container .contact-inf .box-inf .icon img{
+ max-width: 75%;
+ max-height: 75%;
+}
+
+
+.contact-inf-container .contact-inf .box-inf .text-inf {
+ display: flex;
+ margin-left: 20px;
+ font-size: 22px;
+ color: #fff;
+ flex-direction: column;
+ font-weight: 300;
+}
+
+.contact-inf-container .contact-inf .box-inf .text-inf h3 {
+ font-weight: 500;
+ color: green;
+}
+
+.contact-fm { 
+ width: 40%; 
+ padding: 40px;
+ background: #fff;
+}
+
+.contact-fm h2 {
+ font-size: 30px;
+ color: #333;
+ font-weight: 500;
+}
+
+.contact-fm .inputBox {
+ position: relative;
+ width: 100%;
+ margin-top: 10px;
+ 
+}
+
+.contact-fm .inputBox input, 
+.contact-fm .inputBox textarea{
+ width: 100%;
+ padding: 5px 0;
+ font-size: 16px;
+ margin: 10px 0;
+ border: none; 
+ border-bottom: 2px solid #333;
+ outline: none;
+ resize: none;
+}
+
+.contact-fm .inputBox span {
+ position: absolute;
+ left: 0;
+ padding: 5px 0;
+ font-size: 16px;
+ margin: 10px 0;
+ pointer-events: none;
+ transition: 0.5s;
+ color: #666;
+}
+
+.contact-fm .inputBox input:focus ~ span,
+.contact-fm .inputBox input:valid ~ span,
+.contact-fm .inputBox textarea:focus ~ span,
+.contact-fm .inputBox textarea:valid ~ span {
+ color: #green;
+ font-size: 12px; 
+ transform: translateY(-20px);
+}
+
+.contact-fm .inputBox input[type="submit"] {
+ width: 100px;
+ background: green;
+ color: #fff;
+ cursor: pointer;
+ padding: 10px;
+ font-size: 18px;
+}
+
+@media (max-width: 991px)
+{
+
+ .contact-inf-container
+ {
+  padding: 10px;
+ }
+ 
+ .contact-inf-container {
+  flex-direction: column;
+ } 
+ 
+ .contact-inf-container .contact-inf {
+  margin-bottom: 40px;
+ }
+
+.contact-inf-container .contact-inf,
+ .contact-fm {
+  width: 100%;
+ }
+
+}
+
+
+
+
+/* About page visuals */
+.object-sep {
+width: 0%;
+}
+
+.object-sep.active {
+ transition: 1s;
+ width: 100%;
+}
+
+.object-sep .green-bar {
+ 
+ height: 20px;
+ width: 85%;  
+ background-color: green;
+}
+
+.object-sep .darkgreen-bar {
+
+height: 20px;
+width: 80%; 
+ background-color: #006600;
+}
+
+
+/* Community image and text containers*/
+
+
+.cm-container { 
+ width: 100%;
+ max-width: 1350px;
+ margin: 0 auto;
+ margin-top: 80px;
+ margin-bottom: 30vh;
+ height: 35vh;
+}
+
+.cm-asyc-photo-text-media {
+    
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cm-text-media-container {
+float: left;
+ width: 40%;
+ flex-basis: 50%;
+ padding-right: 30px;
+ padding-left: 30px;
+}
+
+.cm-text-media-container .text-media-header {
+ align-self: flex-start;
+}
+
+.cm-text-media-container .text-media-header h2{
+ font-size: 65px;
+ font-weight: bold;
+ line-height: 1.09;
+ color: green;
+ text-transform: uppercase;
+ margin: 0 0 16px 0;
+ text-align: left;
+}
+
+.cm-text-media-container .text-media-header {
+ width: 100%;
+}
+
+
+.cm-text-media-container .text-media-lower p {
+ color: #000;
+ font-size: 20px;
+ line-height: 1.5;
+ padding: 0;
+ margin-top: 0;
+ margin-bottom: 20px;
+}
+
+.cm-photo-media-container {
+ width: 50%;
+ flex-basis: 50%;
+ float: right;
+ padding-right: 30px;
+}
+
+.cm-photo-media-container .photo-media {
+ backgrou/nd-color: green;
+ width: 100%;
+ height: 100%;
+ trans/form: translate(10px, 10px);
+}
+
+.cm-photo-media-container .photo-media img{
+ width: 100%;
+ bord/er: 10px solid green;
+ display: block;
+ transf/orm: translate(-10px, -10px);
+ transition: 0.5s;
+}
+
+.cm-photo-media-container .photo-media:hover img{
+ 
+ transform: scale(1.1);
+
+}
+
+.photo-media .green-bar {
+visibility: hidden;
+height: 20px; 
+background-color: #006600;
+}
+
+
+.cp-sp-photo-text-media-wrapper {
+
+ width: 100%;
+ display: flex;
+ margin-bottom: 30vh;
+}
+
+.cm-sp-text-container h1 {
+ color: #3a3838;
+ text-align: center;
+ font-size: 2.5vw;
+}
+
+.cm-sp-text-container h2 {
+ color: #006600;
+ text-align: center;
+ font-size: 3.5vw;
+}
+
+.cm-sp-text-container h3 {
+ color: #3a3838;
+ text-align: center;
+ font-size: 4.5vw;
+}
+.cm-sp-text-container span {
+ color: #006600;
+ text-align: center;
+ font-size: 4.5vw;
+}
+
+.cm-sp-photo-container {
+margin: auto;
+width: 60%;
+padding: 10px;
+}
+
+.cm-sp-photo-container img {
+display: block;
+margin: auto;
+box-shadow: 0 2px 2px rgb(0 0 0 / 0.2);
+}
+
 
